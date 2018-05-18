@@ -1,0 +1,359 @@
+@import '../css/reset.css' // ściągnąć ten plik
+//odtworzyć htmla na podstawie klas 
+$font-h1: 'Titillium Web', sans-serif
+$font-main: 'Source Sans Pro', sans-serif
+$color-bg: #111010
+$color-text: rgb(209, 204, 204)
+$color-elem: rgb(159, 162, 194)
+$border: 1px solid white
+
+@mixin flex
+    display: flex
+    align-items: center
+    justify-content: center
+
+
+*
+    box-sizing: border-box    
+
+html 
+    scroll-behavior: smooth
+
+
+body 
+    
+    font-family: $font-main
+    width: 100%
+
+    
+//header    
+header
+    width: 100%
+    height: 15vh
+    background: $color-bg
+    z-index: 100
+    h1 
+        color: $color-text
+        font-family: $font-h1
+        letter-spacing: 2px
+        text-transform: uppercase
+        font-size: 15vh
+        font-weight: 500
+        margin-left: 2.5rem
+
+.nav
+    position: sticky
+    top: 0px
+    width: 100%
+    height: 8vh
+    background: $color-bg
+    display: flex
+    align-items: center
+    z-index: 100
+    
+
+.nav__container
+    display: flex
+    align-items: center
+    margin-left: 2.5rem
+    
+
+.nav__container__li
+    margin-right: 2rem
+    font-size: 3vh
+    letter-spacing: 2px
+    text-transform: uppercase
+    font-weight: 500
+    a
+        color: $color-text
+        text-decoration: none
+        display: block
+    a:hover
+        cursor: pointer
+    a:hover ~ .span
+        visibility: visible   
+
+.span
+    display: block
+    visibility: hidden
+    width: 100%
+    margin-top: 0.3rem
+    height: 0.5vh
+    background-color: $color-elem
+    
+
+.js__active__li
+    visibility: visible
+        
+        
+//section general
+
+.section
+    width: 100%
+    height: 100vh  
+    display: flex
+    flex-direction: column
+ 
+.section__dist
+    width: 100%
+    height: 8%
+    background-color: $color-bg
+    
+.section__player
+    width: 100%
+    height: 80%
+    display: flex
+    
+    
+
+.section__controler
+    width: 100%
+    height: 12%
+    background-color: $color-bg
+    display: flex
+
+//section text
+
+.section__player__text
+    background-color: $color-bg
+    width: 30%
+    height: 100%
+    @include flex
+
+.section__player__text__container
+    width: 60%
+    height: 80%
+    background-color: $color-bg
+    color: $color-text
+    margin-left: 8vw
+    
+    
+            
+.section__player__text__container__header
+    font-size: 5vh
+    letter-spacing: 2px
+
+
+.section__player__text__container__article
+    padding-top: 2vh 
+    font-size: 3vh
+    line-height: 3.2vh
+
+.js__text__carousel
+    display: none
+
+.js__text__active
+    display: block
+    p
+        padding-top: 2vh
+
+//carousel wrapper
+
+.section__player__carousel
+    background-color: $color-bg
+    width: 70%
+    height: 100%
+    @include flex
+
+.carousel__img
+    width: auto
+    max-height: 100%
+    display: none
+
+.section__player__carousel__wrapper
+    height: 95%
+    width: 80%
+    overflow: hidden
+    @include flex
+     
+
+.js__carousel__img    
+    display: block
+
+
+//controlers    
+
+//controler carousel
+.section__controler__carousel
+    width: 70%
+    @include flex
+      
+
+.section__controler__carousel__positioner
+    width: 80%
+    height: 80%
+    @include flex 
+    
+    
+.section__controler__carousel__button    
+    width: 4vh
+    height: 4vh
+    margin-right: 2vw
+    background-color: $color-bg
+    border: 0.3vh solid rgb(159, 162, 194)
+    border-radius: 50%
+    outline: none
+
+.section__controler__carousel__button:hover
+    cursor: pointer
+
+.js__button__hoovered
+    background-color: rgb(159, 162, 194)
+    border: 0.5vh solid rgb(209, 204, 204)
+    border-radius: 50%
+    cursor: pointer
+    
+    
+//controler audio
+.section__controler__audio
+    width: 30%
+    @include flex 
+      
+
+.section__controler__audio__positioner
+    width: 60%
+    height: 80%
+    margin-left: 8vw
+    
+    
+.section__controler__audio__play, 
+.section__controler__audio__sound
+    display: flex
+    
+
+.js__play__button, .js__sound__button  
+    width: 15%
+    color: $color-elem
+    font-size: 4vh
+
+
+
+.js__play__bar__container, 
+.js__sound__bar__container
+    background-color: #222222
+    height: 0.6vh
+    width: 60%
+    //margin: 0.85vw
+    margin: 1.8vh 1.5vh 0 0.5vh
+
+.js__play__button:hover,
+.js__sound__button:hover,      
+.js__play__bar__container:hover,
+.js__sound__bar__container:hover
+    cursor: pointer
+
+.js__play__bar
+    height: 80%
+    width: 0%
+    background-color: $color-elem
+
+.js__sound__bar
+    height: 80%
+    width: 100%
+    background-color: $color-elem    
+    
+.js__play__time
+    font-family: $font-main
+    color: $color-elem
+    font-size: 2.5vh
+    font-weight: 800
+    width: 20%
+    margin-top: 0.6vh
+
+// section reverse   
+
+.section__reverse
+    flex-direction: row-reverse
+    .section__controler__audio__positioner
+        margin-left: 0vw
+        margin-right: 10vw
+    .section__player__text__container
+        margin-left: 0vw
+        margin-right: 10vw
+    
+
+
+
+
+
+#home
+    height: 77vh
+    background-color: yellow    
+
+// RWD
+
+//  Extra small devices (phones, 600px and down)
+@media screen and (max-width: 600px) 
+    .nav__container
+        display: flex
+        align-items: center
+        margin: 0 auto
+    .nav__container__li
+        margin-right: 1rem
+        font-size: 2vh
+
+    .section__player
+        height: 75%
+        flex-direction: column
+    .section__controler
+        height: 17%
+        flex-direction: column-reverse
+        //display: flex
+        padding-bottom: 4vh
+    .section__player__text
+        width: 100%
+        height: 40%
+    .section__player__text__container
+        margin: 0 auto
+        width: 90%
+        height: 100%
+        background-color: $color-bg
+        color: $color-text
+    .section__reverse .section__player__text__container, 
+        margin: 0 auto
+        width: 90%
+        height: 100%
+    .section__reverse .section__controler__audio__positioner,
+    .section__controler__audio__positioner
+        margin: 0 auto
+        width: 70%
+        height: 70%   
+    .section__player__carousel
+        background-color: $color-bg
+        width: 100%
+        height: 60%
+        //@include flex
+    .section__player__carousel__wrapper
+        width: 95%    
+    .section__controler__carousel
+        width: 100%
+        height: 50%
+        //@include flex
+    .section__controler__carousel__button
+        margin-right: 4vw    
+    .section__controler__audio
+        width: 100%
+        height: 50%
+        //@include flex 
+    .section__player__text__container__header
+        font-size: 3vh
+        letter-spacing: 1px
+    .section__player__text__container__article
+        padding-top: 1vh 
+        font-size: 2vh
+        line-height: 2.5vh
+        letter-spacing: 1px
+    .js__text__active > p
+        padding-top: 1vh    
+
+// // Small devices (portrait tablets and large phones, 600px and up)
+//@media only screen and (min-width: 601px) and (max-width: 768px)  
+
+// // Medium devices (landscape tablets, 768px and up)
+// @media only screen and (min-width: 769px) and (min-width: 992px)
+
+// // Large devices (laptops/desktops, 992px and up)
+// @media only screen and (min-width: 992px) 
+
+// // Extra large devices (large laptops and desktops, 1200px and up)
+// @media only screen and (min-width: 1200px)
