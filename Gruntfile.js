@@ -47,6 +47,6 @@ module.exports = function(grunt) {
     grunt.registerTask('default', ["browserSync", "sass", "watch"]);
   };
 
-
+  // do zadania ze sklepem - spark
   //http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html#instance-method-combineAll
   //https://typeofweb.com/2017/05/19/observable-rxjs/
