@@ -1,5 +1,5 @@
-@import '../css/reset.css' 
- 
+@import '../css/reset.css'
+
 $font-h1: 'Titillium Web', sans-serif
 $font-main: 'Source Sans Pro', sans-serif
 $color-bg: #111010
@@ -14,25 +14,24 @@ $border: 1px solid white
 
 
 *
-    box-sizing: border-box    
+    box-sizing: border-box
 
-html 
+html
     scroll-behavior: smooth
 
 
-body 
-    
+body
     font-family: $font-main
     width: 100%
 
-    
-//header    
+
+//header
 header
     width: 100%
     height: 15vh
     background: $color-bg
     z-index: 100
-    h1 
+    h1
         color: $color-text
         font-family: $font-h1
         letter-spacing: 2px
@@ -50,13 +49,13 @@ header
     display: flex
     align-items: center
     z-index: 100
-    
+
 
 .nav__container
     display: flex
     align-items: center
     margin-left: 2.5rem
-    
+
 
 .nav__container__li
     margin-right: 2rem
@@ -71,7 +70,7 @@ header
     a:hover
         cursor: pointer
     a:hover ~ .span
-        visibility: visible   
+        visibility: visible
 
 .span
     display: block
@@ -80,31 +79,28 @@ header
     margin-top: 0.3rem
     height: 0.5vh
     background-color: $color-elem
-    
+
 
 .js__active__li
     visibility: visible
-        
-        
-//section general
 
+
+//section general
 .section
     width: 100%
-    height: 100vh  
+    height: 100vh
     display: flex
     flex-direction: column
- 
+
 .section__dist
     width: 100%
     height: 8%
     background-color: $color-bg
-    
+
 .section__player
     width: 100%
     height: 80%
     display: flex
-    
-    
 
 .section__controler
     width: 100%
@@ -116,10 +112,8 @@ header
 #home
     height: 77vh
     background-color: black
-    
-    
 
-.home_container    
+.home_container
     height: 100%
     width: 100%
     margin: 0 auto
@@ -129,17 +123,14 @@ header
     background-position: 0% 18%
     background-color: $color-bg
     display: flex
-    
-     
-    
+
 .home_container_textH
     height: 100%
-    width: 30% 
+    width: 30%
     display: none//flex
     align-items: center
     background-color: rgba(159, 162, 194, 0.9)
-    
-    //background-color: green
+
     h1
         font-size: 10vh
         margin: 3vh 8vw
@@ -155,24 +146,16 @@ header
     width: 70%
     background-color: rgba(159, 162, 194, 0.9)
     //background-color: yellow
-    
+
     p:first-of-type
         margin-top: 20vh
-    p   
-        //background-color: blue
+    p
         letter-spacing: 2px
         margin: 2vh 4vw
         color: $color-text
         font-size: 4vh
-        //line-height: 3.2vh
-
-        
-    
-    
-    
 
 //section text
-
 .section__player__text
     background-color: $color-bg
     width: 30%
@@ -185,16 +168,13 @@ header
     background-color: $color-bg
     color: $color-text
     margin-left: 8vw
-    
-    
-            
+
 .section__player__text__container__header
     font-size: 5vh
     letter-spacing: 2px
 
-
 .section__player__text__container__article
-    padding-top: 2vh 
+    padding-top: 2vh
     font-size: 3vh
     line-height: 3.2vh
 
@@ -207,7 +187,6 @@ header
         padding-top: 2vh
 
 //carousel wrapper
-
 .section__player__carousel
     background-color: $color-bg
     width: 70%
@@ -224,27 +203,22 @@ header
     width: 80%
     overflow: hidden
     @include flex
-     
 
-.js__carousel__img    
+.js__carousel__img
     display: block
 
-
-//controlers    
-
+//controlers
 //controler carousel
 .section__controler__carousel
     width: 70%
     @include flex
-      
 
 .section__controler__carousel__positioner
     width: 80%
     height: 80%
-    @include flex 
-    
-    
-.section__controler__carousel__button    
+    @include flex
+
+.section__controler__carousel__button
     width: 4vh
     height: 4vh
     margin-right: 2vw
@@ -255,49 +229,41 @@ header
 
 .section__controler__carousel__button:hover
     cursor: pointer
-    
 
 .js__button__hoovered
     background-color: rgb(159, 162, 194)
     border: 0.5vh solid rgb(209, 204, 204)
     border-radius: 50%
     cursor: pointer
-    
-    
+
 //controler audio
 .section__controler__audio
     width: 30%
-    @include flex 
-      
+    @include flex
 
 .section__controler__audio__positioner
     width: 60%
     height: 80%
     margin-left: 8vw
-    
-    
-.section__controler__audio__play, 
+
+.section__controler__audio__play,
 .section__controler__audio__sound
     display: flex
-    
 
-.js__play__button, .js__sound__button  
+.js__play__button, .js__sound__button
     width: 15%
     color: $color-elem
     font-size: 4vh
 
-
-
-.js__play__bar__container, 
+.js__play__bar__container,
 .js__sound__bar__container
     background-color: #222222
     height: 0.6vh
     width: 60%
-    //margin: 0.85vw
     margin: 1.8vh 1.5vh 0 0.5vh
 
 .js__play__button:hover,
-.js__sound__button:hover,      
+.js__sound__button:hover,
 .js__play__bar__container:hover,
 .js__sound__bar__container:hover
     cursor: pointer
@@ -310,8 +276,8 @@ header
 .js__sound__bar
     height: 80%
     width: 100%
-    background-color: $color-elem    
-    
+    background-color: $color-elem
+
 .js__play__time
     font-family: $font-main
     color: $color-elem
@@ -320,8 +286,7 @@ header
     width: 20%
     margin-top: 0.6vh
 
-// section reverse   
-
+// section reverse
 .section__reverse
     flex-direction: row-reverse
     .section__controler__audio__positioner
@@ -330,18 +295,10 @@ header
     .section__player__text__container
         margin-left: 0vw
         margin-right: 10vw
-    
-
-
-
-
-
-
 
 // RWD
-
 //  Extra small devices (phones, 600px and down)
-@media screen and (max-width: 600px) 
+@media screen and (max-width: 600px)
     .nav__container
         display: flex
         align-items: center
@@ -349,14 +306,12 @@ header
     .nav__container__li
         margin-right: 1rem
         font-size: 2vh
-
     .section__player
         height: 75%
         flex-direction: column
     .section__controler
         height: 17%
         flex-direction: column-reverse
-        //display: flex
         padding-bottom: 4vh
     .section__player__text
         width: 100%
@@ -367,7 +322,7 @@ header
         height: 100%
         background-color: $color-bg
         color: $color-text
-    .section__reverse .section__player__text__container, 
+    .section__reverse .section__player__text__container,
         margin: 0 auto
         width: 90%
         height: 100%
@@ -375,43 +330,40 @@ header
     .section__controler__audio__positioner
         margin: 0 auto
         width: 70%
-        height: 70%   
+        height: 70%
     .section__player__carousel
         background-color: $color-bg
         width: 100%
         height: 60%
-        //@include flex
     .section__player__carousel__wrapper
-        width: 95%    
+        width: 95%
     .section__controler__carousel
         width: 100%
         height: 50%
-        //@include flex
     .section__controler__carousel__button
-        margin-right: 4vw    
+        margin-right: 4vw
     .section__controler__audio
         width: 100%
         height: 50%
-        //@include flex 
     .section__player__text__container__header
         font-size: 3vh
         letter-spacing: 1px
     .section__player__text__container__article
-        padding-top: 1vh 
+        padding-top: 1vh
         font-size: 2vh
         line-height: 2.5vh
         letter-spacing: 1px
     .js__text__active > p
-        padding-top: 1vh    
+        padding-top: 1vh
 
 // // Small devices (portrait tablets and large phones, 600px and up)
-//@media only screen and (min-width: 601px) and (max-width: 768px)  
+//@media only screen and (min-width: 601px) and (max-width: 768px)
 
 // // Medium devices (landscape tablets, 768px and up)
 // @media only screen and (min-width: 769px) and (min-width: 992px)
 
 // // Large devices (laptops/desktops, 992px and up)
-// @media only screen and (min-width: 992px) 
+// @media only screen and (min-width: 992px)
 
 // // Extra large devices (large laptops and desktops, 1200px and up)
 // @media only screen and (min-width: 1200px)
