@@ -24,9 +24,9 @@ module.exports = function(grunt) {
         browserSync: {
             bsFiles: {
                 src : [
-                    './css/*.css', 
+                    './css/*.css',
                     './index.html'
-                    
+
                 ]
             },
             options: {
@@ -35,13 +35,13 @@ module.exports = function(grunt) {
                     baseDir: "./"
                 }
             }
-        }  
+        }
     });
     // Load the plugins tasks
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-browser-sync');
-  
+
     // Default task(s).
     //BARDZO WAŻNE - browserSync musi być na pierwszym miejscu, przed watch, inaczej nie odpala w przeglądarce
     grunt.registerTask('default', ["browserSync", "sass", "watch"]);

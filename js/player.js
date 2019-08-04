@@ -1,10 +1,8 @@
 //solution for counting amount of listening 
-
-
 window.addEventListener('load', function () {
 
     var sectionAudio = document.querySelectorAll('.section__controler__audio')
-    console.log(sectionAudio)
+
     for (let f = 0; f < sectionAudio.length; f++) {
 
         // audio container
@@ -17,22 +15,20 @@ window.addEventListener('load', function () {
         let soundBarContainer = sectionAudio[f].querySelector('.js__sound__bar__container');
         let soundBar = sectionAudio[f].querySelector('.js__sound__bar');
 
-        console.log(audio.classList)
-
-
         audio.load();
+
         audio.addEventListener('canplay', function () {
             playButton.addEventListener('click', playOrPause, false);
         }, false);
+
         playBarContainer.addEventListener('click', skip, false);
         audio.addEventListener('durationchange', function () {
             updatePlayer();
         });
+
         soundButton.addEventListener('click', muteOrUnmute, false);
+
         soundBarContainer.addEventListener('click', changeVolume, false);
-
-
-
 
         // function play or pause and change icons and set Interval
         function playOrPause() {
@@ -47,7 +43,6 @@ window.addEventListener('load', function () {
             };
         };
 
-
         // function updating bar with percentage duration of audio
         function updatePlayer() {
             var percentage = (audio.currentTime / audio.duration) * 100;
@@ -58,7 +53,6 @@ window.addEventListener('load', function () {
                 playButton.innerHTML = '&#8634;'
             };
         };
-
 
         // function for skipping audio through clicking on the bar
         function skip(ev) {
@@ -71,7 +65,6 @@ window.addEventListener('load', function () {
 
         };
 
-
         // time of audio
         function getFormattedTime() {
             var showSeconds = Math.round(audio.duration - audio.currentTime);
@@ -82,11 +75,6 @@ window.addEventListener('load', function () {
             if (showMinutes.toString().length < 2) showMinutes = '0' + showMinutes;
             return showMinutes + ':' + showSeconds
         };
-
-
-
-
-
 
         // muting sound
         function muteOrUnmute() {
@@ -102,7 +90,6 @@ window.addEventListener('load', function () {
             }
         };
 
-
         // change volume by sound bar
         function changeVolume(ev) {
             var mouseX = ev.pageX - soundBar.offsetLeft;
@@ -116,8 +103,5 @@ window.addEventListener('load', function () {
             soundButton.innerHTML = '&#128266;';
             soundBar.style.display = 'block';
         };
-
-
     }
-
 });

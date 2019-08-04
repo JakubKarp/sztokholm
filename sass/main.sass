@@ -126,23 +126,19 @@ header
     background-image: url("../img/open.png")
     background-repeat: no-repeat
     background-size: cover
-    background-position: 0% 17%
+    background-position: 0% 18%
     background-color: $color-bg
-
+    display: flex
+    
      
-.home_container_text
-    height: 100%
-    width: 100%
-    //margin: 35vh auto
-    background-color: rgba(159, 162, 194, 0.9)
-    display: none //flex
-    align-items: center
     
 .home_container_textH
     height: 100%
     width: 30% 
-    display: flex
-    align-items: center       
+    display: none//flex
+    align-items: center
+    background-color: rgba(159, 162, 194, 0.9)
+    
     //background-color: green
     h1
         font-size: 10vh
@@ -154,8 +150,10 @@ header
         font-weight: 500
 
 .home_container_textP
+    display: none //block
     height: 100%
     width: 70%
+    background-color: rgba(159, 162, 194, 0.9)
     //background-color: yellow
     
     p:first-of-type
@@ -257,6 +255,7 @@ header
 
 .section__controler__carousel__button:hover
     cursor: pointer
+    
 
 .js__button__hoovered
     background-color: rgb(159, 162, 194)

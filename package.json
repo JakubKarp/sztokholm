@@ -4,7 +4,8 @@
   "description": "Sztokholm 24",
   "main": "index.js",
   "dependencies": {
-    "grunt-cli": "^1.2.0"
+    "grunt-cli": "^1.2.0",
+    "latest": "^0.2.0"
   },
   "devDependencies": {
     "grunt": "^1.0.2",
