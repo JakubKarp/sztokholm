@@ -2,6 +2,16 @@ module.exports = function(grunt) {
 
     // Project configuration.
     grunt.initConfig({
+        babel: {
+          options: {
+            sourceMap: true
+          },
+          dist: {
+            files: {
+              "dist/app.js": "app.js"
+            }
+          }
+        },
         sass: {
             options: {
               sourceMap: true
@@ -19,14 +29,16 @@ module.exports = function(grunt) {
                 options: {
                     spawn: false,
                 },
+                files: ['./app.js'],
+                tasks: ['babel'],
             }
         },
         browserSync: {
             bsFiles: {
                 src : [
                     './css/*.css',
-                    './index.html'
-
+                    './index.html',
+                    './dist/app.js'
                 ]
             },
             options: {
@@ -40,11 +52,12 @@ module.exports = function(grunt) {
     // Load the plugins tasks
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-browser-sync');
+    grunt.loadNpmTasks('grunt-browser-sync');
+    grunt.loadNpmTasks('grunt-babel');
 
     // Default task(s).
     //BARDZO WAŻNE - browserSync musi być na pierwszym miejscu, przed watch, inaczej nie odpala w przeglądarce
-    grunt.registerTask('default', ["browserSync", "sass", "watch"]);
+    grunt.registerTask('default', ["browserSync", "babel", "sass", "watch"]);
   };
 
   // do zadania ze sklepem - spark

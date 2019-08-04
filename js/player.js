@@ -1,4 +1,5 @@
 //solution for counting amount of listening 
+
 window.addEventListener('load', function () {
 
     var sectionAudio = document.querySelectorAll('.section__controler__audio')
